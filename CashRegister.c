@@ -86,21 +86,43 @@ int main (void) {
     // int i_remainder=0;
     int i_pennies_sum = 0;
     int i_nickles_sum = 0;
-    int i_dimes_sum =0;
+    int i_dimes_sum = 0;
     int i_quarters_sum = 0;
     int i_dollars_sum = 0;
 
-    i_pennies_sum = i1_pennies + i2_pennies + i3_pennies;
-    if (i_pennies_sum >= 5) {
-        i_nickles_sum = i_pennies_sum /5.0;
-        i_pennies_sum -= i_nickles_sum*5;
-    }
+//    i_pennies_sum = i1_pennies + i2_pennies + i3_pennies;
+//    if (i_pennies_sum >= 5) {
+//        i_nickles_sum = i_pennies_sum /5.0;
+//        i_pennies_sum -= i_nickles_sum*5;
+//    }
+//
+//    i_nickles_sum += i1_nickles + i2_nickles + i3_nickles;
+//    if (i_nickles_sum >= 2){
+//        i_dimes_sum = i_nickles_sum / 10.0;
+//        i_nickles_sum -= i_dimes_sum*10;
+//    }
+//
+//    i_dimes_sum += i1_dimes + i2_dimes + i3_dimes;
+//    if (i_dimes_sum >= 3) {
+//        i_quarters_sum = i_dimes_sum / 25;
+//        i_dimes_sum -= i_quarters_sum * 25;
+//    }
+//
+//    i_quarters_sum += i1_quarter + i2_quarter + i3_quarter;
+//    if 
+    //i_dimes_sum += i1
 
-    i_nickles_sum += i1_dimes + i2_dimes + i3_dimes;
-    if (i_nickles_sum >= 10){
-        i_dimes_sum = i_nickles_sum / 10.0;
-        i_nickles_sum -= i_dimes_sum*10;
-    }
+    i_pennies_sum = i1_pennies + i2_pennies + i3_pennies;
+    i_nickles_sum = i_pennies_sum / 5;
+    i_pennies_sum %= 5;
+
+    i_nickles_sum += i1_nickles + i2_nickles + i3_nickles;
+    i_dimes_sum = i_nickles_sum / 2;
+    i_nickles_sum %= 2;
+
+    i_dimes_sum += i1_dimes + i2_dimes + i3_dimes;
+    i_quarters_sum = i_dimes_sum / 2.5;
+//    i_dimes_sum %= 2.5;
 
     return 0;
 }
